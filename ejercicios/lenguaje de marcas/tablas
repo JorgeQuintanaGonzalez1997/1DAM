@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lag="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Documento></title>
+    </head>
+    <body>
+        <table border="1">
+            <caption>Horario</caption>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th scope="col">Lunes</th>
+                    <th scope="col">Martes</th>
+                    <th scope="col">Miércoles</th>
+                    <th scope="col">Jueves</th>
+                    <th scope="col">Viernes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">10:30</th>
+                    <td>Matemáticas</td>
+                    <td>Geografía</td>
+                    <td>Física</td>
+                    <td>Dibujo</td>
+                    <td rowspan=2>Matemáticas</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row">11:30</th>
+                    <td>Inglés</td>
+                    <td>Lenguaje</td>
+                    <td>Geografía</td>
+                    <td>Química</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>
+        <table  border="1">
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td rowspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                
+            </tr>
+            <tr>
+                <td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+
+        </table>
+        </p>
+        <p>
+            <table border="1">
+            <captio>Gastos mensuales</captio>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Unidades</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Camisetas</th>
+                        <td>10</td>
+                        <td>2</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <th>Pantalones</th>
+                        <td>3</td>
+                        <td>14</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <th>Chaqueta</th>
+                        <td>4</td>
+                        <td>20</td>
+                        <td>80</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">2014</th>
+                        <th>Total</th>
+                        <td>142</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </p>
+        <p>
+            <table border="1">
+                <colgroup>
+                    <col span="" style="background-color:orange">
+                    <col span="2" style="background-color:green">
+                    <col span="" style="background-color: aqua">
+                    <col span="2" span="5" style="background-color:gray">
+                </colgroup>
+                <thead style="background-color: yellow;">
+                    <tr>
+                        
+                        <th colspan="6">Días laborables de la semana</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&nbsp;</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th rowspan="4">Mes de octubre</th>
+                        <td>8,30</td>
+                        <td rowspan="3">9,00</td>
+                        <td>8,45</td>
+                        <td>10,00</td>
+                        <td>9,45</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9,00</td>
+                        <td rowspan="2">9,00</td>
+                        <td>10,15</td>
+                        <td>10,15</td>
+                    </tr>
+                    <tr>
+                        <td>9,30</td>
+                        <td colspan="2" rowspan="2">10,30</td>
+                    </tr>
+                    <tr>
+                        <td>10,00</td>
+                        <td>9,30</td>
+                        <td>9,15</td> 
+                    </tr>
+                
+                    <tr>
+                        <td>&nbsp;</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                    </tr>
+                </tbody>
+                <tfoot style="background-color: yellow;">
+                    <tr>
+                        <th colspan="6">Días laborales de la semana</th>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </p>
+    </body>
+</html>
