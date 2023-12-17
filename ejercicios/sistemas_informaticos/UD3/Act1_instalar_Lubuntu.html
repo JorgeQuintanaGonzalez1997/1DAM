@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+    <h1>Título</h1></br>
+    </p>
+    <p>
+        Instalación de Lubuntu con UEFI
+    </p>
+    <p>
+    <h2>Índice</h2></br>
+    </p>
+    <p>
+
+    </p>
+    <h2>Introducción</h2></br>
+    <p>
+        En aquesta pràctica crearem una una màquina virtual de Lubuntu 20.04/22.04 LTS
+        Desktop per a entregar la pràctica hauràs d'emplenar la informació sol·licitada i realitzar
+        els passos adequats. 
+
+    </p>
+    <p>
+    <h2>Objetivo de la memoría</h2></br>
+    </p>
+    <p>
+        El objetivo de esta memoria es documentar todo el proceso de instalación de Lubuntu.
+    </p>
+    <p>
+    <h2>Material utilizado</h2></br>
+    </p>
+    <p>
+
+    </p>
+    <p>
+    <h2>Desarrollo: </h2></br>
+    </p>
+    <p>
+        1. Esbrina els requisits maquinari mínim i òptim per a poder realitzar la instal·lació de
+        la versió de Lubuntu Desktop 20.04 o 22.04.
+    </p>
+    <p>
+
+    </p>
+    <p>
+        2. Prepara una MV amb les següents característiques:
+        <ul>
+            <li>NOM de la màquina: : Lub_alumnatDNI (3 últimes xifres)</li>
+            <li>Dos discs durs de 20 GiB cadascun i un CD/DVD SATA.</li>
+            <li>4GiB de memòria RAM (teniu en compte la vostra RAM).</li>
+            <li>L'ordre d'arrancada serà: 1-Disc òptic, 2-Targeta de xarxa, 3-HDD.</li>
+            <li>Activa particions EFI</li>
+            <li>Processador de dos nuclis (si és possible)</li>
+            <li>Activa la funció ampliada PAE/NX</li>
+            <li> Dues targetes de xarxa, una en adaptador pont (per a la instal·lació pot estar en NAT) i una altra en xarxa interna.</li>
+            <li>Inseriu l'arxiu iso d'arrancada de Lubuntu en el disc òptic (com si realitzares la instal·lació des d'un CD o DVD)</li>
+        </ul>
+    </p>
+    <p>
+        <img src="../img/UD3/detalles de la maquina virtual.png">
+    </p>
+    <p>3. Executa la màquina virtual i entra a provar Lubuntu (NO executes la instal·lació
+        directament). Com pots veure en l'ordinador arranca una versió del sistema
+        operatiu configurada perquè l'usuari prove el seu funcionament, a més et permet
+        realitzar determinades operacions de manteniment-configuració i connexió a
+        internet. Cerca l'aplicació GParted i executa-la (sinó apareix realitza la instal·lació
+        mitjançant “$sudo apt-get install gparted ”). Realitza la següents operacions amb els
+        discos durs buits de la màquina virtual:
+        <ul>
+            <li>Crea una taula de particions GPT en sda. Contesta a la pregunta: És 
+                necessari realitzar una altra en sdb o serveix per als dos HDD? Per què? Cerca 
+                la informació per a contestar-la en la teoria de classe i dedueix la resposta. En 
+                què creus que consisteix la taula de particions de msdos i en quins sistemes 
+                s'utilitzava? En els sistemes actuals es poden usar ambdues?
+            </li>
+            <li>En el primer disc SATA (sda) de la teua MV crea 2 particions: 
+                <ul>
+                    <li>Una partició primària (sda1) de 4GiB de grandària, format ext4.</li>
+                    <li>Una altra primària (sda2) amb la resta de disc dur lliure, on el seu sistema de
+                        fitxers serà EXT4 y a més serà la partició d’arrancada.</li>
+                    <li>En el segon disc SATA (sdb) de la teua MV crea 6 particions intentant dividir el
+                        disc dur en 6 particions iguals, donant-li un format de sistemes de fitxer NTFS.</li>
+                </ul>
+            </li>    
+        </ul>
+    </p>
+    <p>
+        <img src="../img/UD3/crear gpt tabla.png" height="2" width="2"></img>
+    </p>
+    <p>
+        <img src="../img/UD3/1 disco duro GPT.png"></img>
+    </p>
+    <p>
+        <img src="../img/UD3/2disco duro MBR.png"></img>
+    </p>
+    <p>
+        4. Des de l'escriptori de Lubuntu arranca la instal·lació del sistema operatiu per a
+        instal·lar-lo en el HDD del teu MV, tria l'idioma Castellà o Valencià, configura el
+        teclat seleccionant l'idioma, tria el tipus d'instal·lació mínima sense que s'actualitze
+        (sinó pot tardar més d'una hora la instal·lació). Quan et demane realitzar l'operació
+        de triar un disc dur on instal·lar el Sistema Operatiu realitza la configuració de
+        manera manual
+        <ul>
+            <li>
+                Esborra les particions de tots dos discs durs
+            </li>
+            <li>
+                En sda:
+                <ul>
+                    <li>
+                        Crea una partició de tipus EFI Sytem Partition (ESP) amb sistema de
+                        fitxers FAT32 i de 512MiB (trobeu el punt de muntatge i la seua bandera)
+                    </li>
+                    <li>
+                        Crea una segona partició de 12 GiB, amb el sistema de fitxers EXT4 i el
+                        punt de muntatge /  on es copiarà el Sist. Op.
+                    </li>
+                    <li>Una altra amb la resta del disc dur, EXT4 i que el seu punt de muntatge
+                        siga /home → Que utilitat creus que pot tindre posar una partició
+                        com a punt de muntatge en /home?
+                    </li>
+                </ul>
+            </li>
+            <li>
+                En sdb, dues particions:
+                <ul>
+                    <li>
+                        Una de les particions són sistema de fitxers linux-swap de grandària
+                        4GiB. ¿Quina relació té aquesta partició amb la grandària de la
+                        RAM?
+                    </li>
+                    Un sistema de ficheros swap emula, virtualmente, la memoria RAM. Por tanto, y estando hablando del sdb, que contiene una tabla de particiones MBR, es importante que el fichero swap tenga una capacidad igual o muy parecida a la RAM, porque utiliza un sistema de paginación para gestionar la memoría virtual.
+                    <li>
+                        La resta del disc dur amb sistema de fitxers NTFS
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </p>
+    <p>
+        <img src="../img/UD3/1 disco instalación.png"></img>
+    </p>
+    <p>
+        <img src="../img/UD3/2 disco instalacion.png"></img>
+    </p>
+    <p>
+        5. Contínua la instal·lació del sistema operatiu indicant-li la franja horària adequada,
+        afig el nom de l'usuari (alumnat), nom de l'equip (aula_pc) p.e. info2-01,
+        contrasenya (1234), seleccionar que demane contrasenya en iniciar sessió i acaba
+        de realitzar la instal·lació.
+    </p>
+    <p>
+        <img src="../img/UD3/introducir contraseña al entrar.png">
+
+    </p>
+    <p>
+        6. Des del menú aplicacions busca l'aplicació GParted i executa-la (sinó està la
+        instal·les) i comprova com estan creades les particions. Des de PCManFT-Qt
+        (Nautilus en Ubuntu), és a dir, l'explorador d'arxius, intenta entrar en la partició
+        NTFS que has creat.
+    </p>
+    <p>
+        <img src="../img/UD3/situacion actual disco 1 gpt.png">
+    </p>
+    <p>
+        <img src="../img/UD3/situacion actual disco 2 mbr.png"></img>
+    </p>
+    <p>
+        7. Investiga en internet quals són els comande per a muntar/desmuntar una partició o
+        un pendrive en Linux per a poder accedir als fitxers d'eixa partició. 
+    </p>
+    <p>
+
+    </p>
+    <h2>Problemas encontrados en cada actividad, solución y/o sugerencias</h2></br>
+    <h2>Conclusión</h2>
+</body>
+</html>
