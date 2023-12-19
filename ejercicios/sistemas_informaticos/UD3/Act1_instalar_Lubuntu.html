@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color:navajowhite;">
     <p>
     <h1>Título</h1></br>
     </p>
@@ -13,78 +13,96 @@
         Instalación de Lubuntu con UEFI
     </p>
     <p>
+    <a id="indice"></a>
     <h2>Índice</h2></br>
+    <ul>
+        <li><a href="#introduccion">Introducción</a></li>
+        <li><a href="#objetivo">Objetivo de la memoria</a></li>
+        <li><a href="#material">Material utilizado</a></li>
+        <li><a href="#desarrollo">Desarrollo</a></li>
+        <li><a href="#problemas">Problemas encontrados, soluciones y/o sugerencias.</a></li>
+        <li><a href="#conclusion">Conclusión</a></li>
+    </ul>
     </p>
     <p>
 
     </p>
+    <a id="introduccion"></a>
     <h2>Introducción</h2></br>
+    <a href="#indice">Ir al índice</a>
     <p>
-        En aquesta pràctica crearem una una màquina virtual de Lubuntu 20.04/22.04 LTS
-        Desktop per a entregar la pràctica hauràs d'emplenar la informació sol·licitada i realitzar
-        els passos adequats. 
+        En esta práctica crearemos una máquina virtual de Lubuntu 20.04/22.04 LTS
+        Desktop para entregar la práctica tendrás que rellenar la información solicitada y realizar
+        los pasos adecuados 
 
     </p>
     <p>
-    <h2>Objetivo de la memoría</h2></br>
+    <a id="objetivo"></a>
+    <h2>Objetivo de la memoria</h2></br>
+    <a href="#indice">Ir al índice</a>
     </p>
     <p>
         El objetivo de esta memoria es documentar todo el proceso de instalación de Lubuntu.
     </p>
     <p>
+    <a id="material"></a>
     <h2>Material utilizado</h2></br>
+    <a href="#indice">Ir al índice</a>
+    
     </p>
     <p>
 
     </p>
     <p>
+    <a id="desarrollo"></a>
     <h2>Desarrollo: </h2></br>
+    <a href="#indice">Ir al índice</a>
     </p>
     <p>
-        1. Esbrina els requisits maquinari mínim i òptim per a poder realitzar la instal·lació de
-        la versió de Lubuntu Desktop 20.04 o 22.04.
+        <span style="color:red">1</span>. <span style="color:blue"> Los requisitos hardware mínimo y óptimo para poder realizar la instalación de
+        la versión de Lubuntu Desktop 20.04 o 22.04.</span>
     </p>
     <p>
 
     </p>
     <p>
-        2. Prepara una MV amb les següents característiques:
+        <span style="color:red">2</span>. <span style="color:blue"> Prepara una MV con las siguientes características:</span>
         <ul>
-            <li>NOM de la màquina: : Lub_alumnatDNI (3 últimes xifres)</li>
-            <li>Dos discs durs de 20 GiB cadascun i un CD/DVD SATA.</li>
-            <li>4GiB de memòria RAM (teniu en compte la vostra RAM).</li>
-            <li>L'ordre d'arrancada serà: 1-Disc òptic, 2-Targeta de xarxa, 3-HDD.</li>
-            <li>Activa particions EFI</li>
-            <li>Processador de dos nuclis (si és possible)</li>
-            <li>Activa la funció ampliada PAE/NX</li>
-            <li> Dues targetes de xarxa, una en adaptador pont (per a la instal·lació pot estar en NAT) i una altra en xarxa interna.</li>
-            <li>Inseriu l'arxiu iso d'arrancada de Lubuntu en el disc òptic (com si realitzares la instal·lació des d'un CD o DVD)</li>
+            <li>NOMBRE de la máquina: : Lub_alumneDNI (3 últimas cifras)</li>
+            <li>Dos discos duros de 20 GiB cada uno y un CD/DVD SATA.</li>
+            <li>4GiB de memoria RAM (tenga en cuenta su RAM).</li>
+            <li>El orden de arranque será: 1-Disco óptico, 2-Tarjeta de red, 3-HDD.</li>
+            <li>Activar particiones EFI</li>
+            <li>Procesador de dos núcleos (si es posible)</li>
+            <li>Activa la función ampliada PAE/NX</li>
+            <li>Dos tarjetas de red, una en adaptador puente (para la instalación puede estar en NAT) y otra en red interna.</li>
+            <li>Inserte el archivo iso de arranque de Lubuntu en el disco óptico (como si realizaras la instalación desde un CD o DVD)</li>
         </ul>
     </p>
     <p>
         <img src="../img/UD3/detalles de la maquina virtual.png">
     </p>
-    <p>3. Executa la màquina virtual i entra a provar Lubuntu (NO executes la instal·lació
-        directament). Com pots veure en l'ordinador arranca una versió del sistema
-        operatiu configurada perquè l'usuari prove el seu funcionament, a més et permet
-        realitzar determinades operacions de manteniment-configuració i connexió a
-        internet. Cerca l'aplicació GParted i executa-la (sinó apareix realitza la instal·lació
-        mitjançant “$sudo apt-get install gparted ”). Realitza la següents operacions amb els
-        discos durs buits de la màquina virtual:
+    <p><span style="color:red">3</span>. <span style="color:blue">Ejecuta la máquina virtual y entra a probar Lubuntu (NO ejecutas la instalación
+        directamente). Cómo puedes ver en el ordenador arranca una versión del sistema
+        operativo configurada para que el usuario pruebe su funcionamiento, además te permite
+        realizar determinadas operaciones de mantenimiento-configuración y conexión a
+        internet. Busca la aplicación GParted y ejecútala (sino aparece realiza la instalación
+        mediante “$sudo apt-get install gparted ”). Realiza la siguientes operaciones con los
+        discos duros vacíos de la máquina virtual:</span>
         <ul>
-            <li>Crea una taula de particions GPT en sda. Contesta a la pregunta: És 
-                necessari realitzar una altra en sdb o serveix per als dos HDD? Per què? Cerca 
-                la informació per a contestar-la en la teoria de classe i dedueix la resposta. En 
-                què creus que consisteix la taula de particions de msdos i en quins sistemes 
-                s'utilitzava? En els sistemes actuals es poden usar ambdues?
+            <li><span style="color:blue"> una tabla de particiones GPT en sda. Contesta a la pregunta: Es
+                ¿necesario realizar otra en sdb o sirve para los dos HDD? ¿Por qué? Búsqueda
+                la información para contestarla en la teoría de clase y deduce la respuesta. En
+                qué crees que consiste la tabla de particiones de msdos y en qué sistemas
+                se utilizaba? ¿En los sistemas actuales se pueden usar ambas?</span>
             </li>
-            <li>En el primer disc SATA (sda) de la teua MV crea 2 particions: 
+            <li><span style="color:blue">En el primer disco SATA (sda) de tu MV crea 2 particiones:</span> 
                 <ul>
-                    <li>Una partició primària (sda1) de 4GiB de grandària, format ext4.</li>
-                    <li>Una altra primària (sda2) amb la resta de disc dur lliure, on el seu sistema de
-                        fitxers serà EXT4 y a més serà la partició d’arrancada.</li>
-                    <li>En el segon disc SATA (sdb) de la teua MV crea 6 particions intentant dividir el
-                        disc dur en 6 particions iguals, donant-li un format de sistemes de fitxer NTFS.</li>
+                    <li><span style="color:blue">Una partición primaria (sda1) de 4GiB de tamaño, formato ext4.</span></li>
+                    <li><span style="color:blue">Otra primaria (sda2) con el resto de disco duro libre, donde su sistema de
+                        archivos será EXT4 y además será la partición de arranque.</span></li>
+                    <li><span style="color:blue">En el segundo disco SATA (sdb) de tu MV crea 6 particiones intentando dividir el
+                        disco duro en 6 particiones iguales, dándole un formato de sistemas de archivo NTFS.</span></li>
                 </ul>
             </li>    
         </ul>
@@ -99,44 +117,44 @@
         <img src="../img/UD3/2disco duro MBR.png"></img>
     </p>
     <p>
-        4. Des de l'escriptori de Lubuntu arranca la instal·lació del sistema operatiu per a
-        instal·lar-lo en el HDD del teu MV, tria l'idioma Castellà o Valencià, configura el
-        teclat seleccionant l'idioma, tria el tipus d'instal·lació mínima sense que s'actualitze
-        (sinó pot tardar més d'una hora la instal·lació). Quan et demane realitzar l'operació
-        de triar un disc dur on instal·lar el Sistema Operatiu realitza la configuració de
-        manera manual
+        <span style="color:red">4</span>. <span style="color:blue">Desde el escritorio de Lubuntu arranca la instalación del sistema operativo para
+        instalarlo en el HDD de tu MV, elige el idioma Castellano o Valenciano, configura el
+        teclado seleccionando el idioma, elige el tipo de instalación mínima sin que se actualice
+        (sino puede tardar más de una hora la instalación). Cuando te pida realizar la operación
+        de elegir un disco duro donde instalar el Sistema Operativo realiza la configuración de
+        modo manual</span>
         <ul>
             <li>
-                Esborra les particions de tots dos discs durs
+                <span style="color:blue">Borra las particiones de ambos discos duros</span>
             </li>
             <li>
-                En sda:
+                <span style="color:blue">En sda:</span>
                 <ul>
                     <li>
-                        Crea una partició de tipus EFI Sytem Partition (ESP) amb sistema de
-                        fitxers FAT32 i de 512MiB (trobeu el punt de muntatge i la seua bandera)
+                        <span style="color:blue">Crea una partición de tipo EFI Sytem Partition (ESP) con sistema de
+                        archivos FAT32 y de 512MiB (encuentre el punto de montaje y su bandera)</span>
                     </li>
                     <li>
-                        Crea una segona partició de 12 GiB, amb el sistema de fitxers EXT4 i el
-                        punt de muntatge /  on es copiarà el Sist. Op.
+                        <span style="color:blue">Crea una segunda partición de 12 GiB, con el sistema de archivos EXT4 y el
+                        punto de montaje / donde se copiará el Sist. Op.</span>
                     </li>
-                    <li>Una altra amb la resta del disc dur, EXT4 i que el seu punt de muntatge
-                        siga /home → Que utilitat creus que pot tindre posar una partició
-                        com a punt de muntatge en /home?
+                    <li><span style="color:blue">Otra con el resto del disco duro, EXT4 y que su punto de montaje
+                        sea ​​/home → Qué utilidad crees que puede tener poner una partición
+                        como punto de montaje en /hombre?</span>
                     </li>
                 </ul>
             </li>
             <li>
-                En sdb, dues particions:
+                <span style="color:blue">En sdb, dues particions:</span>
                 <ul>
                     <li>
-                        Una de les particions són sistema de fitxers linux-swap de grandària
-                        4GiB. ¿Quina relació té aquesta partició amb la grandària de la
-                        RAM?
+                        <span style="color:blue">Una de las particiones son sistema de archivos linux-swap de tamaño
+                        4GiB. ¿Qué relación tiene esta partición con el tamaño de la
+                        RAM?</span>
                     </li>
-                    Un sistema de ficheros swap emula, virtualmente, la memoria RAM. Por tanto, y estando hablando del sdb, que contiene una tabla de particiones MBR, es importante que el fichero swap tenga una capacidad igual o muy parecida a la RAM, porque utiliza un sistema de paginación para gestionar la memoría virtual.
+                    <span style="color:blue">Un sistema de archivos swap emula, virtualmente, la memoria RAM. Por tanto, y estando hablando del sdb, que contiene una tabla de particiones MBR, es importante que el archivo swap tenga una capacidad igual o muy parecida a la RAM, porque utiliza un sistema de paginación para gestionar la memoria virtual.</span>
                     <li>
-                        La resta del disc dur amb sistema de fitxers NTFS
+                        <span style="color:blue">El resto del disco duro con sistema de archivos NTFS</span>
                     </li>
                 </ul>
 
@@ -150,20 +168,20 @@
         <img src="../img/UD3/2 disco instalacion.png"></img>
     </p>
     <p>
-        5. Contínua la instal·lació del sistema operatiu indicant-li la franja horària adequada,
-        afig el nom de l'usuari (alumnat), nom de l'equip (aula_pc) p.e. info2-01,
-        contrasenya (1234), seleccionar que demane contrasenya en iniciar sessió i acaba
-        de realitzar la instal·lació.
+        <span style="color:red">5</span>. <span style="color:blue">Continua la instalación del sistema operativo indicándole la franja horaria adecuada,
+        añade el nombre del usuario (alumnado), nombre del equipo (aula_pc) p.e. info2-01,
+        contraseña (1234), seleccionar que pida contraseña al iniciar sesión y termina
+        de realizar la instalación.</span>
     </p>
     <p>
         <img src="../img/UD3/introducir contraseña al entrar.png">
 
     </p>
     <p>
-        6. Des del menú aplicacions busca l'aplicació GParted i executa-la (sinó està la
-        instal·les) i comprova com estan creades les particions. Des de PCManFT-Qt
-        (Nautilus en Ubuntu), és a dir, l'explorador d'arxius, intenta entrar en la partició
-        NTFS que has creat.
+        <span style="color:red">6</span>.<span style="color:blue">Desde el menú aplicaciones busca la aplicación GParted y ejecútala (sino está la
+        instala) y comprueba cómo están creadas las particiones. Desde PCManFT-Qt
+        (Nautilus en Ubuntu), es decir, el explorador de archivos, intenta entrar en la partición
+        NTFS que has creado.</span>
     </p>
     <p>
         <img src="../img/UD3/situacion actual disco 1 gpt.png">
@@ -172,13 +190,18 @@
         <img src="../img/UD3/situacion actual disco 2 mbr.png"></img>
     </p>
     <p>
-        7. Investiga en internet quals són els comande per a muntar/desmuntar una partició o
-        un pendrive en Linux per a poder accedir als fitxers d'eixa partició. 
+        <span style="color:red">7</span>. <span style="color:blue">Investiga en internet cuales son los pedidos para montar/desmontar una partición o
+        un pendrive en Linux para poder acceder a los archivos de esa partición.</span>
     </p>
     <p>
 
     </p>
+    <a id="problemas"></a>
     <h2>Problemas encontrados en cada actividad, solución y/o sugerencias</h2></br>
+    <a href="#indice">Ir al índice</a>
+    <a id="conclusion"></a>
     <h2>Conclusión</h2>
+    <a href="#indice">Ir al índice</a>
+    
 </body>
 </html>
