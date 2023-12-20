@@ -7,10 +7,13 @@
 </head>
 <body style="background-color:navajowhite;">
     <p>
+        <img src="../img/UD3/lubuntu_marca.png" width="600" height="400">
+    </p>
+    <p>
     <h1>Título</h1></br>
     </p>
     <p>
-        Instalación de Lubuntu con UEFI
+        Instalación de Lubuntu LT en un sistema UEFI
     </p>
     <p>
     <a id="indice"></a>
@@ -48,7 +51,20 @@
     <a id="material"></a>
     <h2>Material utilizado</h2></br>
     <a href="#indice">Ir al índice</a>
-    
+    <ul>
+        <li>
+            Ordenador del centro educativo
+        </li>
+        <li>
+            Ordenador personal
+        </li>
+        <li>
+            Oracle VM VirtualBox
+        </li>
+        <li>
+            ISO de lubuntu 20.04
+        </li>
+    </ul>
     </p>
     <p>
 
@@ -83,19 +99,35 @@
         <img src="../img/UD3/detalles de la maquina virtual.png" width="600" height="400">
     </p>
     <p><span style="color:red">3</span>. <span style="color:blue">Ejecuta la máquina virtual y entra a probar Lubuntu (NO ejecutas la instalación
-        directamente). Cómo puedes ver en el ordenador arranca una versión del sistema
-        operativo configurada para que el usuario pruebe su funcionamiento, además te permite
+        directamente). Cómo puedes ver en el ordenador arranca una versión del sistema operativo configurada</br>
+         para que el usuario pruebe su funcionamiento, además te permite
         realizar determinadas operaciones de mantenimiento-configuración y conexión a
-        internet. Busca la aplicación GParted y ejecútala (sino aparece realiza la instalación
+        internet. Busca la aplicación GParted</br> y ejecútala (sino aparece realiza la instalación
         mediante “$sudo apt-get install gparted ”). Realiza la siguientes operaciones con los
         discos duros vacíos de la máquina virtual:</span>
         <ul>
             <li><span style="color:blue"> una tabla de particiones GPT en sda. Contesta a la pregunta: Es
                 ¿necesario realizar otra en sdb o sirve para los dos HDD? ¿Por qué? Búsqueda
-                la información para contestarla en la teoría de clase y deduce la respuesta. En
+                la información para contestarla</br> en la teoría de clase y deduce la respuesta. En
                 qué crees que consiste la tabla de particiones de msdos y en qué sistemas
-                se utilizaba? ¿En los sistemas actuales se pueden usar ambas?</span>
+                se utilizaba? ¿En los sistemas actuales se pueden usar</br> ambas?</span>
             </li>
+            <p>
+
+            </p>
+            Si, es necesario crear otra tabla de partición GPT en el otro disco. Porque la primera tabla GPT fue creada en el disco sda, por tanto para que el disco sdb tenga una tabla GPT es necesario crearla. Además de que la práctica nos solicita que cada tabla GPT tenga características distintas, y que una de ellas tenga EFI.
+            <p>
+
+            </p>
+            La tabla de partición msdos es una tabla MBR. Utilizados en sistemas que no eran/son 64 bits. 
+            <p>
+
+            </p>
+            Si, actualmente se pueden utilizar tanto GPT como msdos. Porque los sistemas de 64 bits admiten tanto GPT como MBR.
+            <p>
+
+            </p>
+
             <li><span style="color:blue">En el primer disco SATA (sda) de tu MV crea 2 particiones:</span> 
                 <ul>
                     <li><span style="color:blue">Una partición primaria (sda1) de 4GiB de tamaño, formato ext4.</span></li>
@@ -119,9 +151,9 @@
     <p>
         <span style="color:red">4</span>. <span style="color:blue">Desde el escritorio de Lubuntu arranca la instalación del sistema operativo para
         instalarlo en el HDD de tu MV, elige el idioma Castellano o Valenciano, configura el
-        teclado seleccionando el idioma, elige el tipo de instalación mínima sin que se actualice
+        teclado</br> seleccionando el idioma, elige el tipo de instalación mínima sin que se actualice
         (sino puede tardar más de una hora la instalación). Cuando te pida realizar la operación
-        de elegir un disco duro donde instalar el Sistema Operativo realiza la configuración de
+        de</br> elegir un disco duro donde instalar el Sistema Operativo realiza la configuración de
         modo manual</span>
         <ul>
             <li>
@@ -140,8 +172,11 @@
                     </li>
                     <li><span style="color:blue">Otra con el resto del disco duro, EXT4 y que su punto de montaje
                         sea ​​/home → Qué utilidad crees que puede tener poner una partición
-                        como punto de montaje en /hombre?</span>
+                        como punto de montaje en /home?</span>
                     </li>
+                    <p>
+                        La partición, con el punto de montaje /home, es el destino de todos los archivos que descarguemos y personales (estudios, pasatiempos, de configuración</br> o preferencias a la hora de utilizar aplicaciones).
+                    </p>
                 </ul>
             </li>
             <li>
@@ -152,7 +187,15 @@
                         4GiB. ¿Qué relación tiene esta partición con el tamaño de la
                         RAM?</span>
                     </li>
-                    <span style="color:blue">Un sistema de archivos swap emula, virtualmente, la memoria RAM. Por tanto, y estando hablando del sdb, que contiene una tabla de particiones MBR, es importante que el archivo swap tenga una capacidad igual o muy parecida a la RAM, porque utiliza un sistema de paginación para gestionar la memoria virtual.</span>
+                    <p>
+                        La partición con el systema de ficheros swap tiene dos funciones:
+
+	                    Para cuando la RAM esté saturada, se utilizará el espacio asignado de esta partición para</br> “descongestionar” la saturada RAM.
+
+	                    Y la segunda función es, para cuando apretemos los botones “hibernar” o “suspender”, se volcará toda la información</br> de nuestra sesión activa en esta partición. Es por esta función la razón por la cual es apropiado que tenga una capacidad equivalente a la de la</br> RAM, como mínimo.
+
+                    </p>
+                    <span style="color:blue">Un sistema de archivos swap emula, virtualmente, la memoria RAM. Por tanto, y estando hablando del sdb, que contiene una tabla de particiones MBR,</br> es importante que el archivo swap tenga una capacidad igual o muy parecida a la RAM, porque utiliza un sistema de paginación para gestionar la memoria virtual.</span>
                     <li>
                         <span style="color:blue">El resto del disco duro con sistema de archivos NTFS</span>
                     </li>
@@ -169,7 +212,7 @@
     </p>
     <p>
         <span style="color:red">5</span>. <span style="color:blue">Continua la instalación del sistema operativo indicándole la franja horaria adecuada,
-        añade el nombre del usuario (alumnado), nombre del equipo (aula_pc) p.e. info2-01,
+        añade el nombre del usuario (alumnado), nombre del equipo (aula_pc) p.e. info2-01,</br>
         contraseña (1234), seleccionar que pida contraseña al iniciar sesión y termina
         de realizar la instalación.</span>
     </p>
@@ -179,7 +222,7 @@
     </p>
     <p>
         <span style="color:red">6</span>.<span style="color:blue">Desde el menú aplicaciones busca la aplicación GParted y ejecútala (sino está la
-        instala) y comprueba cómo están creadas las particiones. Desde PCManFT-Qt
+        instala) y comprueba cómo están creadas las particiones.</br> Desde PCManFT-Qt
         (Nautilus en Ubuntu), es decir, el explorador de archivos, intenta entrar en la partición
         NTFS que has creado.</span>
     </p>
@@ -191,7 +234,7 @@
     </p>
     <p>
         <span style="color:red">7</span>. <span style="color:blue">Investiga en internet cuales son los pedidos para montar/desmontar una partición o
-        un pendrive en Linux para poder acceder a los archivos de esa partición.</span>
+        un pendrive en Linux para poder</br> acceder a los archivos de esa partición.</span>
     </p>
     <p>
 
@@ -199,9 +242,19 @@
     <a id="problemas"></a>
     <h2>Problemas encontrados en cada actividad, solución y/o sugerencias</h2></br>
     <a href="#indice">Ir al índice</a>
+    <p>
+        En el disco sdb creé la tabla de partición en msdos, en vez de GPT. Esto es debido a que la condición de la capacidad</br>
+        de cada partición tenían que ser la misma, y un número de 6 particiones. Al leer estas características pensé en hacerlo</br>
+        con msdos (MBR), ya que las particiones de la tabla MBR tienen el mismo tamaño. y respecto al número de</br>
+        particiones (6), hice 3 particiones primarias, y 1 extendida, la cual tendría 3 particiones lógicas.
+    </p>
     <a id="conclusion"></a>
     <h2>Conclusión</h2>
     <a href="#indice">Ir al índice</a>
+    <p>
+        Como conclusión, esta práctica me ha ayudado a entender mucho mejor la importancia de los tipos de archivo en sus correspondientes</br>
+        particiones. Además de la importancia de la capacidad de cada partición según su función y el tipo de archivo que tienen asignado.
+    </p>
     
 </body>
 </html>
