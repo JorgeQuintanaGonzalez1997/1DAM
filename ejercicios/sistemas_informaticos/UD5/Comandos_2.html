@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de usuarios y grupos. Permisos. Procesos II</title>
+</head>
+<body style="background-color:navajowhite;">
+    <p>
+        <img src="../img/UD3/lubuntu_marca.png" width="600" height="400">
+    </p>
+    <p>
+    <h2>Título</h2></br>
+    </p>
+    <p>
+        <h1><strong>Gestión de usuarios y grupos. Permisos. Procesos II</strong></h1></br>
+        Jorge Quintana González 1ºDAM
+    </p>
+    <p>
+    <a id="indice"></a>
+    <h2>Índice</h2></br>
+    <ul>
+        <li><a href="#introduccion">Introducción</a></li>
+        <li><a href="#objetivo">Objetivo de la memoria</a></li>
+        <li><a href="#material">Material utilizado</a></li>
+        <li><a href="#desarrollo">Desarrollo</a></li>
+        <li><a href="#problemas">Problemas encontrados, soluciones y/o sugerencias.</a></li>
+        <li><a href="#conclusion">Conclusión</a></li>
+    </ul>
+    </p>
+    <p>
+
+    </p>
+    <a id="introduccion"></a>
+    <h2>Introducción</h2></br>
+    <a href="#indice">Ir al índice</a>
+    <p>
+       
+
+    </p>
+    <p>
+    <a id="objetivo"></a>
+    <h2>Objetivo de la memoria</h2></br>
+    <a href="#indice">Ir al índice</a>
+    </p>
+    <p>
+        
+    </p>
+    <p>
+    <a id="material"></a>
+    <h2>Material utilizado</h2></br>
+    <a href="#indice">Ir al índice</a>
+    <ul>
+        <li>
+            Marca y modelo del procesador: AMD Ryzen 7 5800X 8-Core Processor
+        </li>
+        <li>
+            Capacidad de la memoria RAM: 16 GB
+        </li>
+        <li>
+            Tipo de dispositivo de almacenamiento y su Capacidad (GiB):
+            <ul>
+                <li>
+                    SSD
+                </li>
+                <li>
+                    101,514 GiB
+                </li>
+            </ul>
+        </li>
+    </ul>
+    </p>
+    <p>
+    <a id="desarrollo"></a>
+    <h2>Desarrollo: </h2></br>
+    <a href="#indice">Ir al índice</a>
+    </p>
+    <p>
+        <span style="color:red">1</span>Como usuario gasol, copia el programa “gnometris” del directorio /usr/games a tu directorio personal con un nombre diferente, por ejemplo “mitretris”.<span style="color:blue"></span>
+    </p>
+    <p>
+       
+    </p>
+    <p>
+        <ul>
+            <li>
+                Mira los permisos de este programa y exprésalos en notación simbólica, notación octal y describe que permisos son.
+            </li>
+            <li>
+                Modifica estos permisos mediante notación simbólica para que el propietario tenga todos los permisos y el grupo y el resto ningún permiso (en modo texto).
+            </li>
+            <li>
+                Comprueba desde el usuario gasol que se puede ejecutar. Puede que sea necesario dar permiso para que otros usuarios distintos al actual puedan ejecutar aplicaciones en el entorno gráfico, basta con ejecutar como administrador: xhost +.
+            </li>
+            <li>
+                Comprueba los grupos a los que pertenece el usuario (en modo texto).
+            </li>
+            <li>
+                Añade desde un usuario con permisos de administración al usuario gasol al grupo “admin”. Comprueba que se ha añadido el grupo (en modo texto).
+            </li>
+        </ul>
+    
+    <p>
+        <span style="color:red">2</span>Añade al grupo entrenadores el usuario navarro. Comprueba que se ha realizado la acción correctamente (en modo texto).<span style="color:blue"></span>
+        
+    </p>
+    <p>
+        <img src="" width="1200" height="1000"></img>
+    </p>
+    <p><span style="color:red">3</span>Cambia el grupo del fichero triples.txt, ahora este fichero pertenecerá al grupo entrenadores (en modo texto). Compruébalo<span style="color:blue"></span>
+        
+    </p>
+    <p>
+        <img src="" width="600" height="400"></img>
+    </p>
+    <p>
+        <img src="" width="600" height="400"></img>
+    </p>
+   
+    <p>
+        <span style="color:red">4</span>Cambia el propietario del fichero mates.txt que pertenece al usuario gasol y haz que pertenezca al usuario navarro (en modo texto). Compruébalo.<span style="color:blue"></span>
+        
+    </p>
+    <p>
+        <img src="../img/UD5/Parte 1/3.4.navarro.triples.PNG" width="600" height="400"></img>
+    </p>
+   
+    <p>
+        <span style="color:red">5</span>Configura el monitor del sistema para que se muestre la siguiente información referente a los procesos, nombre del proceso, estado, memoria virtual, memoria compartida, %CPU, tiempo de CPU, ID. Además la información debe refrescarse cada 3 segundos.<span style="color:blue"></span>
+    </p>
+    <p>
+        <p>
+            <img src="../img/UD5/Parte 1/3.4.gasol.mates.PNG" width="600" height="400"></img>
+        </p>
+    </p>
+    
+    <p>
+        <span style="color:red">6</span>Inicia en segundo plano el proceso nano obligatorio.dat y el proceso cat </dev/zero >/dev/null y responde a las siguientes preguntas.<span style="color:blue"></span>
+    </p>
+    <p>
+        <ul>
+            <li>
+                Muestra los procesos que se están ejecutando en segundo plano .
+            </li>
+            <li>
+                Comprueba desde la consola cual es el estado de ambos procesos (STAT). Quédate con el PID de cada uno de ellos
+            </li>
+            <li>
+                Desde la consola, suspende el segundo proceso y comprueba que está suspendido.
+            </li>
+            <li>
+                Revisa en modo gráfico el estado de ambos procesos y comprueba que están suspendidos. ¿Por qué el primer proceso está suspendido si nosotros no lo hemos suspendido?
+            </li>
+            <li>
+                Comprueba en tiempo real todos los procesos que se están ejecutando en ese momento en tu sistema.
+            </li>
+            <li>
+                Activa el segundo proceso en modo gráfico. Comprueba que se ha activado también en modo gráfico.
+            </li>
+            <li>
+                Desde la consola mata el primer proceso.
+            </li>
+            <li>
+                Desde la consola, cambia la prioridad del segundo proceso a 10 sin detenerlo, es decir, mientras se está ejecutando. Comprueba que se ha realizado el cambio correctamente.
+            </li>
+        </ul>
+    </p>
+    <a id="problemas"></a>
+    <h2>Problemas encontrados en cada actividad, solución y/o sugerencias</h2></br>
+    <a href="#indice">Ir al índice</a>
+    
+    <a id="conclusion"></a>
+    <h2>Conclusión</h2>
+    <a href="#indice">Ir al índice</a>
+    <p>
+       
+    </p>
+    
+</body>
+</html>
