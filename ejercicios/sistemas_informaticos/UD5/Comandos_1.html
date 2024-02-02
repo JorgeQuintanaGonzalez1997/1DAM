@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalación de Lubuntu LT en un sistema UEFI</title>
+</head>
+<body style="background-color:navajowhite;">
+    <p>
+        <img src="../img/UD3/lubuntu_marca.png" width="600" height="400">
+    </p>
+    <p>
+    <h2>Título</h2></br>
+    </p>
+    <p>
+        <h1><strong>Gestión de usuarios y grupos. Permisos. Procesos I</strong></h1></br>
+        Jorge Quintana González 1ºDAM
+    </p>
+    <p>
+    <a id="indice"></a>
+    <h2>Índice</h2></br>
+    <ul>
+        <li><a href="#introduccion">Introducción</a></li>
+        <li><a href="#objetivo">Objetivo de la memoria</a></li>
+        <li><a href="#material">Material utilizado</a></li>
+        <li><a href="#desarrollo">Desarrollo</a></li>
+        <li><a href="#problemas">Problemas encontrados, soluciones y/o sugerencias.</a></li>
+        <li><a href="#conclusion">Conclusión</a></li>
+    </ul>
+    </p>
+    <p>
+
+    </p>
+    <a id="introduccion"></a>
+    <h2>Introducción</h2></br>
+    <a href="#indice">Ir al índice</a>
+    <p>
+       
+
+    </p>
+    <p>
+    <a id="objetivo"></a>
+    <h2>Objetivo de la memoria</h2></br>
+    <a href="#indice">Ir al índice</a>
+    </p>
+    <p>
+        
+    </p>
+    <p>
+    <a id="material"></a>
+    <h2>Material utilizado</h2></br>
+    <a href="#indice">Ir al índice</a>
+    <ul>
+        <li>
+            Ordenador del centro educativo
+        </li>
+        <li>
+            Ordenador personal
+        </li>
+        <li>
+            Oracle VM VirtualBox
+        </li>
+        <li>
+            ISO de lubuntu 20.04
+        </li>
+    </ul>
+    </p>
+    <p>
+
+    </p>
+    <p>
+    <a id="desarrollo"></a>
+    <h2>Desarrollo: </h2></br>
+    <a href="#indice">Ir al índice</a>
+    </p>
+    <p>
+        <span style="color:red">1</span>Crea desde el terminal los grupos jugadores y entrenadores.<span style="color:blue"></span>
+    </p>
+    <p>
+        
+
+    </p>
+    <p>
+        <span style="color:red">2</span>Crea en modo gráfico los usuarios navarro y gasol como usuarios de escritorio. Estos usuarios deben tener como grupo principal “jugadores”.<span style="color:blue"></span>
+        
+    </p>
+    <p>
+        <img src="" width="1200" height="1000">
+    </p>
+    <p><span style="color:red">3</span>Crea desde el terminal los usuarios pepu y aito. Estos usuarios deben tener como grupo principal “entrenadores” y además pertenecer a los grupos “adm”, “dialout”, “cdrom”, “floppy”, “audio”, “dip”, “video”, “plugdev”, “fuse”, “lpadmin”, “admin”.<span style="color:blue"></span>
+        
+    </p>
+    <p>
+        <img src="" width="600" height="400"></img>
+    </p>
+    <p>
+        <img src="" width="600" height="400"></img>
+    </p>
+    <p>
+        <img src="" width="600" height="400"></img>
+    </p>
+    <p>
+        <span style="color:red">4</span>Como usuario “navarro” y en su carpeta personal, crea un fichero con nombre triples.txt al que tenga acceso él, de lectura y de escritura y el grupo al que pertenece de lectura, el resto sin permisos (Hacerlo todo en modo gráfico).<span style="color:blue"></span>
+        
+    </p>
+    <p>
+        <img src="" width="600" height="400"></img>
+    </p>
+    <p>
+        <img src="" width="600" height="400"></img>
+    </p>
+    <p>
+        <span style="color:red">5</span>Como usuario “gasol” y en su carpeta personal, crea un fichero con nombre mates.txt al que tengan acceso, tanto para leer como para escribir, además de gasol, todos los usuarios que pertenezcan al mismo grupo que gasol y el resto de usuarios acceso de sólo lectura. Comprueba como usuario navarro que puedes modificar el fichero (Hacerlo todo en modo texto).<span style="color:blue"></span>
+    </p>
+    
+    <p>
+        <span style="color:red">6</span>Dados los siguientes permisos expresados en diferente notación, explica qué significan.<span style="color:blue"></span>
+    </p>
+    <p>
+        <ol>
+            <li>
+                225
+
+            </li>
+            <li>
+                616
+            </li>
+            <li>
+                113
+            </li>
+            <li>
+                rwx--x--x
+            </li>
+            <li>
+                --x------
+            </li>
+        </ol>
+    </p>
+    <p>
+        <img src="" width="600" height="400">
+    </p>
+    <p>
+        <img src="" width="600" height="400"></img>
+    </p>
+    <p>
+        <span style="color:red">7</span>Responde a las siguientes preguntas sobre el directorio /lib<span style="color:blue"></span>
+    </p>
+    <p>
+        <ol>
+            <li>
+                ¿Qué tipo de archivos hay en ese directorio? ¿Cuáles son los permisos del directorio?
+            </li>
+            <li>
+                ¿Cómo se expresan esos permisos en forma octal?
+
+            </li>
+            <li>
+                ¿Por qué el directorio debe tener esos permisos, y no otros?
+            </li>
+            <li>
+                Intenta cambiar los permisos del directorio a 666. ¿Qué sucede?
+            </li>
+            <li>
+                Si ejecutamos umask 223, ¿qué permisos por defecto tendrá cualquier fichero que creemos en el sistema? ¿y cualquier directorio?
+            </li>
+        </ol>
+    </p>
+   
+    <a id="problemas"></a>
+    <h2>Problemas encontrados en cada actividad, solución y/o sugerencias</h2></br>
+    <a href="#indice">Ir al índice</a>
+    
+    <a id="conclusion"></a>
+    <h2>Conclusión</h2>
+    <a href="#indice">Ir al índice</a>
+    <p>
+       
+    </p>
+    
+</body>
+</html>
