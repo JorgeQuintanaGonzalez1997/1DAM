@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instalación de Lubuntu LT en un sistema UEFI</title>
+    <title>Gestión de usuarios y grupos. Permisos. Procesos I</title>
 </head>
 <body style="background-color:navajowhite;">
     <p>
@@ -77,7 +77,7 @@
         <span style="color:red">1</span>Crea desde el terminal los grupos jugadores y entrenadores.<span style="color:blue"></span>
     </p>
     <p>
-        
+        <img src="../img/UD5/Parte 1/3.1.png" width="600" height="400"></img>
 
     </p>
     <p>
@@ -85,32 +85,47 @@
         
     </p>
     <p>
-        <img src="" width="1200" height="1000">
+        <img src="../img/UD5/Parte 1/3.2.PNG" width="1200" height="1000"></img>
     </p>
     <p><span style="color:red">3</span>Crea desde el terminal los usuarios pepu y aito. Estos usuarios deben tener como grupo principal “entrenadores” y además pertenecer a los grupos “adm”, “dialout”, “cdrom”, “floppy”, “audio”, “dip”, “video”, “plugdev”, “fuse”, “lpadmin”, “admin”.<span style="color:blue"></span>
         
     </p>
     <p>
-        <img src="" width="600" height="400"></img>
+        <img src="../img/UD5/Parte 1/3.3.aito.PNG" width="600" height="400"></img>
     </p>
     <p>
-        <img src="" width="600" height="400"></img>
+        <img src="../img/UD5/Parte 1/3.3.pepu.PNG" width="600" height="400"></img>
     </p>
     <p>
-        <img src="" width="600" height="400"></img>
+        <img src="../img/UD5/Parte 1/3.3aito.grupos.PNG" width="600" height="400"></img>
     </p>
+    <p>
+        <img src="../img/UD5/Parte 1/3.3.pepu.grupos.PNG" width="600" height="400"></img>
+    </p>
+    
     <p>
         <span style="color:red">4</span>Como usuario “navarro” y en su carpeta personal, crea un fichero con nombre triples.txt al que tenga acceso él, de lectura y de escritura y el grupo al que pertenece de lectura, el resto sin permisos (Hacerlo todo en modo gráfico).<span style="color:blue"></span>
         
     </p>
     <p>
-        <img src="" width="600" height="400"></img>
+        <img src="../img/UD5/Parte 1/3.4.navarro.triples.PNG" width="600" height="400"></img>
+    </p>
+    <p>
+        <img src="../img/UD5/Parte 1/3.4.gasol.mates.permisos.PNG" width="600" height="400"></img>
     </p>
     <p>
         <img src="" width="600" height="400"></img>
     </p>
     <p>
         <span style="color:red">5</span>Como usuario “gasol” y en su carpeta personal, crea un fichero con nombre mates.txt al que tengan acceso, tanto para leer como para escribir, además de gasol, todos los usuarios que pertenezcan al mismo grupo que gasol y el resto de usuarios acceso de sólo lectura. Comprueba como usuario navarro que puedes modificar el fichero (Hacerlo todo en modo texto).<span style="color:blue"></span>
+    </p>
+    <p>
+        <p>
+            <img src="../img/UD5/Parte 1/3.4.gasol.mates.PNG" width="600" height="400"></img>
+        </p>
+        <p>
+            <img src="../img/UD5/Parte 1/3.4.gasol.mates.permisos.PNG" width="600" height="400"></img>
+        </p>
     </p>
     
     <p>
@@ -119,20 +134,23 @@
     <p>
         <ol>
             <li>
-                225
+                225: Son permisos expresados en octal. Significa que el usuario tiene permiso de escritura, su grupo de escritura y otros usuarios de lectura y de ejecución.
 
             </li>
             <li>
-                616
+                616: Son permisos expresados en octal. Significa que el usuario tiene permisos de lectura y escritura, su grupo de ejecución, y otros usuarios de lectura y escritura
             </li>
             <li>
-                113
+                113:  Son permisos expresados en octal. Significa que el usuario tiene permiso de ejecución, su grupo de ejecución, y otros usuarios de escritura y de ejecución
+
             </li>
             <li>
-                rwx--x--x
+                rwx--x--x: Son permisos expresados en letras y “-”, siendo “r”, lectura (read), “w” escritura (write), “x” ejecución (execution y “-” ausencia de permiso (sustituyendo al permiso que ocupa esa posición). Las tres primeras posiciones indican los permisos del usuario, las siguientes tres posiciones los permisos de su grupo, y las últimas tres los permisos de los otros usuarios En este caso el usuario tiene permisos de lectura, escritura y ejecución, su grupo sólo de ejecución y otros usuarios de ejecución.
+
             </li>
             <li>
-                --x------
+                --x------: En este caso, el único que tiene permisos es el propio usuario, y sólo tiene permiso de ejecución
+
             </li>
         </ol>
     </p>
@@ -148,17 +166,23 @@
     <p>
         <ol>
             <li>
-                ¿Qué tipo de archivos hay en ese directorio? ¿Cuáles son los permisos del directorio?
+                ¿Qué tipo de archivos hay en ese directorio? ¿Cuáles son los permisos del directorio?</br>
+                En el directorio /lib se encuentran las librerías necesarios para poder ejecutar el contenido de los directorios /bin y /sbin
             </li>
             <li>
-                ¿Cómo se expresan esos permisos en forma octal?
+                ¿Cómo se expresan esos permisos en forma octal?</br>
+                Los permisos del directorio /lib son rwx r-x r-x, que expresados de forma octal son: 755
+
 
             </li>
             <li>
-                ¿Por qué el directorio debe tener esos permisos, y no otros?
+                ¿Por qué el directorio debe tener esos permisos, y no otros?</br>
+                Para que cualquiera pueda ver el contenido del mismo, pero sólo el usuario propietario pueda modificar su contenido.
+
             </li>
             <li>
-                Intenta cambiar los permisos del directorio a 666. ¿Qué sucede?
+                Intenta cambiar los permisos del directorio a 666. ¿Qué sucede?</br>
+                Al principio no me deja, por falta de permisos. Pero utilizando el super usuario si me ha dejado.
             </li>
             <li>
                 Si ejecutamos umask 223, ¿qué permisos por defecto tendrá cualquier fichero que creemos en el sistema? ¿y cualquier directorio?
