@@ -8,13 +8,16 @@ body
     border-bottom-left-radius: 10%;
     border-top-right-radius: 10%;
     border-top-left-radius: 10%;
-    border: 2px solid;
+    border: 2px red;
 }
 .titulo
 {
 
+    box-sizing:border-box;
+    width: 220px;
+    border: 2px solid;
     font-size: 30px;
-    margin-left: 30%;
+    margin-left: 50%;
     margin-top: 2%;
     margin-bottom: 10%;
     
@@ -27,7 +30,10 @@ body
 }
 p
 {
-    
+
+    box-sizing: border-box;
+    width: 150px;
+    font-size: 20px;
     position: relative;
     margin-left: 2%;
     margin-right: 85%;
@@ -53,7 +59,6 @@ text-decoration: none;
     background-color: darkolivegreen;
     position: relative;
     top: 10%;
-    border: 2px solid;
 }
 .robot
 {
@@ -61,7 +66,8 @@ text-decoration: none;
     width: 50%;
     height: 50%;
     border: 2px solid;
-    margin-left: 30%;
+    margin-left: 25%;
+    
       
 }
 html
