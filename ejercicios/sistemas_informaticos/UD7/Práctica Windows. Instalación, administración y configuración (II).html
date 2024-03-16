@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalación de Windows</title>
+</head>
+<body style="background-color:navajowhite;">
+    <p>
+        <img src="../img/UD7/windows_logo.png" width="1000" height="400">
+    </p>
+    <p>
+    <h2>Título</h2></br>
+    </p>
+    <p>
+        <h1><strong>Práctica Windows. Instalación, administración y configuración (II)</strong></h1></br>
+        Jorge Quintana González 1ºDAM
+    </p>
+    <p>
+    <a id="indice"></a>
+    <h2>Índice</h2></br>
+    <ul>
+        <li><a href="#introduccion">Introducción</a></li>
+        <li><a href="#objetivo">Objetivo de la memoria</a></li>
+        <li><a href="#material">Material utilizado</a></li>
+        <li><a href="#desarrollo">Desarrollo</a></li>
+        <li><a href="#problemas">Problemas encontrados, soluciones y/o sugerencias.</a></li>
+        <li><a href="#conclusion">Conclusión</a></li>
+    </ul>
+    </p>
+    <p>
+
+    </p>
+    <a id="introduccion"></a>
+    <h2>Introducción</h2></br>
+    <a href="#indice">Ir al índice</a>
+    <p>
+        
+
+    </p>
+    <p>
+    <a id="objetivo"></a>
+    <h2>Objetivo de la memoria</h2></br>
+    <a href="#indice">Ir al índice</a>
+    </p>
+    <p>
+       El objetivo de esta memoria es aprender a crear volumenes RAID 1 y comprender su utilidad.
+    </p>
+    <p>
+    <a id="material"></a>
+    <h2>Material utilizado</h2></br>
+    <a href="#indice">Ir al índice</a>
+    <ul>
+        <li>
+            Marca y modelo del procesador: AMD Ryzen 7 5800X 8-Core Processo
+        </li>
+        <li>
+            Capacidad de la memoria RAM: 16 GB
+        </li>
+        <li>
+            Tipo de dispositivo de almacenamiento y su Capacidad (GiB)
+            <ul>
+                <li>
+                    SSD
+
+                </li>
+                <li>
+                    101,514 GiB
+
+                </li>
+            </ul>
+        </li>
+    </ul>
+    </p>
+    <p>
+
+    </p>
+    <p>
+    <a id="desarrollo"></a>
+    <h2>Desarrollo: </h2></br>
+    <a href="#indice">Ir al índice</a>
+    </p>
+    <p>
+        <span style="color:red">1</span>. <span style="color:blue">Como desde un cliente no es posible crear un RAID 5 (debe estar conectado a un dominio), crea
+            una nuevo volumen RAID 1 en el controlador de dominio con 3 discos de 3GB cada uno (imágenes</br>
+            que lo prueben con el nombre de tu usuario). Si todo ha ido bien pasa al siguiente paso, en caso</br>
+            contrario ¿Explica el motivo por el que no has podido continuar? (una vez explicado avisa al</br>
+            profesor) (imagen/es)</span>
+    </p>
+    <p>
+        <img src="../img/UD7/Act1_1.png" width="800" height="200">
+    </p>
+    <p>
+        Me he cambiado el nombre de usuario pero me sigue apareciendo este nombre.
+    </p>
+    <p>
+        <img src="../img/UD7/Act1_2.png" width="800" height="400">
+    </p>
+    <p>
+        Seleciono los discos correspondientes y los convierto en dinámicos.
+    </p>
+    <p>
+        <img src="../img/UD7/Act1_3.png" width="800" height="400">
+    </p>
+    <p>
+        Creo el volumen y añado el segundo disco.
+    </p>
+    <p>
+        <img src="../img/UD7/Act1_4.png" width="800" height="400">
+    </p>
+    <p>
+        De doy un tipo de archivo, un label y que de un formato rápidamente.
+    </p>
+    <p>
+        <span style="color:red">2</span>. <span style="color:blue">Deposita en el Volumen creado un fichero</br>
+            Nombre+3DNI.txt con tu nombre, la fecha y hora
+            actual, y una frase ingeniosa (imagen)
+            </span>
+        
+    </p>
+    <p>
+        <img src="../img/UD7/Act2_1.png" width="800" height="200">
+    </p>
+    <p>
+        <img src="../img/UD7/Act2_2.png" width="800" height="200">
+    </p>
+    <p>
+        Creo que el archivo con texto dentro del archivo Jorge538 y dentro de E:
+    </p>
+    <p>
+        <span style="color:red">3</span>. <span style="color:blue">Apaga la MV y desconecta uno de los discos duros que conforman el RAID 1. Arranca de nuevo
+            la MV, inicia sesión con tu usuario y comprueba la tolerancia a fallos del volumen abriendo el</br>
+            fichero txt creado. (imagen/es donde se incluya la fecha y hora del equipo en ese instante)</br>
+            </span>
+    </p>
+    <p>
+        <img src="../img/UD7/Act3_1.png" width="800" height="400">
+
+    </p>
+    <p>
+        Elimino el segundo disco que formaba parte del volumen. Me señala que hay un error de redundancia. Sin embargo el archivo creado previamente se puede abrir sin problemas.</br>
+        Eso es debido a que el RAID 1, al tener dos dicos con información reflejada, si uno es eliminado el otro disco mantiene la misma información. Es decir, que un volumen RAID 1</br>
+        tiene tolerancia a fallos de perdida de información en uno de sus discos.
+    </p>
+    <p>
+        <span style="color:red">4</span>. <span style="color:blue">Repara el volumen RAID 1 y comprueba de nuevo el fichero txt (imagen/es)</span>
+        
+    </p>
+    <p>
+        <img src="../img/UD7/Act3_2.png"  width="800" height="400">
+    </p>
+    <p>
+        Quito el reflejo del disco faltante.
+    </p>
+    <p>
+        <img src="../img/UD7/Act3_3.png"  width="800" height="400">
+    </p>
+    <p>
+        Y teniendo un tercer disco sin formato, seleccionamos el disco con la información y añadimos un reflejo nuevo.
+    <p>
+        <img src="../img/UD7/Act4_3.png"  width="800" height="400">
+    </p>
+    <p>
+        Compruebo si puedo abrir bien la carpeta y el documento de texto. No hay ningún problema. He reparado el error sin ningún problema.
+    </p>
+    <a id="problemas"></a>
+    <h2>Problemas encontrados en cada actividad, solución y/o sugerencias</h2></br>
+    <a href="#indice">Ir al índice</a>
+    <p>
+       No he encontrado ninguno. Sin embargo, al principio cometí el error de eliminar el volumen en vez de eliminar el reflejo. Así que tuve que empezar de nuevo la práctica.
+    </p>
+    <a id="conclusion"></a>
+    <h2>Conclusión</h2>
+    <a href="#indice">Ir al índice</a>
+    <p>
+        Los volumenes RAIDs 1 son muy útiles debido a la tolerancia a la perdida de información.
+    </p>
+    
+</body>
+</html>
