@@ -13,7 +13,7 @@
     <h2>Título</h2></br>
     </p>
     <p>
-        <h1><strong>Práctica Windows. Instalación, administración y configuración (II)</strong></h1></br>
+        <h1><strong>Práctica Windows. Instalación, administración y configuración (III)</strong></h1></br>
         Jorge Quintana González 1ºDAM
     </p>
     <p>
@@ -44,7 +44,7 @@
     <a href="#indice">Ir al índice</a>
     </p>
     <p>
-       El objetivo de esta memoria es aprender a crear volumenes RAID 1 y comprender su utilidad.
+       El objetivo de esta memoria es aprender a utilizar varias funciones del panel de control
     </p>
     <p>
     <a id="material"></a>
@@ -87,51 +87,103 @@
             de control. Accede al Panel de Control, Cuentas de Usuario. Elimina la
             cuenta usr1, pero conservando los archivos.</span>
     </p>
+    Accedo al panel de control, cuentas de usuario.
     <p>
-        <img src="../img/UD7" width="800" height="200">
+        <img src="../img/UD7/13_panel_Control.PNG" width="800" height="500">
+    </p>
+    
+    Selecciono la cuenta del usuario que quiero alterar. En este caso usr1.
+    <p>
+        <img src="../img/UD7/13_cuentas.PNG" width="800" height="500">
+    </p>
+    
+    Selecciono "eliminar cuenta".
+    <p>
+        <img src="../img/UD7/13_eliminar_cuenta.PNG" width="800" height="500">
+    </p>
+    Selecciono "conservar archivos". Para no perder los rchivos cuando eliminemos la cuenta.
+    
+    <p>
+        <img src="../img/UD7/13_conservar_archivos.PNG" width="800" height="500">
+    </p>
+    
+    Selecciono "eliminar cuenta".
+    <p>
+        <img src="../img/UD7/13_eliminar_end.PNG" width="800" height="500">
+    </p>
+    
+    
+    <p>
+        <span style="color:red">14</span>. <span style="color:blue">Comprueba que hay una carpeta nueva en tu escritorio. Entra y
+            revisa qué es lo que hay y qué no hay en ella</span>
+        
+    </p>
+    Abrimos la carpeta que se acaba de crear y comprobamos que están los archivos de la cuenta eliminada.
+    <p>
+        <img src="../img/UD7/14_carpeta_escritorio.PNG" width="800" height="500">
     </p>
     
     <p>
-        <span style="color:red">2</span>. <span style="color:blue">Deposita en el Volumen creado un fichero</br>
-            Nombre+3DNI.txt con tu nombre, la fecha y hora
-            actual, y una frase ingeniosa (imagen)
-            </span>
+        <img src="../img/UD7/14_dentro_carpeta.PNG" width="800" height="500">
+    </p>
+    <p>
+        <img src="../img/UD7/14_dentro_documentos_end.PNG" width="800" height="500">
+    </p>
+    <p>
+        <span style="color:red">17</span>. <span style="color:blue">Habilita que se bloqueen las cuentas después de 3 intentos no
+            válidos de poner la contraseña. (secpol.msc)</span>
+    </p>
+    Modificamos el umbral de intentos para que se bloquee la cuenta si falla 3 veces a la hora de introucir la contraseña.
+    <p>
+        <img src="../img/UD7/17_bloquear_cuentas_por_fallar.PNG" width="800" height="500">
+    </p>
+    <p>
+        <span style="color:red">24</span>. <span style="color:blue">Intenta abrir sesión con el usuario adm11, pero equivócate 3 veces
+            en la contraseña. Se debe bloquear la cuenta.</span>
         
     </p>
     <p>
-        <img src="../img/UD7/Act2_1.png" width="800" height="200">
+        <img src="../img/UD7/24_cuenta_adm11_bloqueda.PNG" width="800" height="500">
     </p>
     <p>
-        <span style="color:red">3</span>. <span style="color:blue">Apaga la MV y desconecta uno de los discos duros que conforman el RAID 1. Arranca de nuevo
-            la MV, inicia sesión con tu usuario y comprueba la tolerancia a fallos del volumen abriendo el</br>
-            fichero txt creado. (imagen/es donde se incluya la fecha y hora del equipo en ese instante)</br>
+        <span style="color:red">25</span>. <span style="color:blue">Entra al sistema como Alumno (administrador) y desbloquea la
+            cuenta desde la ficha del usuario (pestaña General)</span>
+    </p>
+    <p>
+        <img src="../img/UD7/25_desbloqueada.PNG" width="800" height="500">
+    </p>
+    <p>
+        <img src="../img/UD7/25_cuenta_bloqueada.PNG" width="800" height="500">
+    </p>
+    <p>
+        <span style="color:red">28</span>. <span style="color:blue">Crea en el escritorio una “nueva consola de administración” con
+            los siguientes complementos:
             </span>
     </p>
-    <p>
-        <img src="../img/UD7/Act3_1.png" width="800" height="400">
+    No entendí que es lo que tenía que hacer.
 
+    <p>
+        <span style="color:red">31</span>. <span style="color:blue">Ya debe aparecer el servicio del servidor FTP. Arranca el servicio
+            FTP y configúralo para que se inicie unos minutos después de cada
+            arranque del equipo
+            </span>
     </p>
     <p>
-        Elimino el segundo disco que formaba parte del volumen. Me señala que hay un error de redundancia. Sin embargo el archivo creado previamente se puede abrir sin problemas.</br>
-        Eso es debido a que el RAID 1, al tener dos dicos con información reflejada, si uno es eliminado el otro disco mantiene la misma información. Es decir, que un volumen RAID 1</br>
-        tiene tolerancia a fallos de perdida de información en uno de sus discos.
+        <img src="../img/UD7/31_servicio_ftp_retrasado.PNG" width="800" height="500">
     </p>
-    <p>
-        <span style="color:red">4</span>. <span style="color:blue">Repara el volumen RAID 1 y comprueba de nuevo el fichero txt (imagen/es)</span>
-        
-    </p>
+    
     
     <a id="problemas"></a>
     <h2>Problemas encontrados en cada actividad, solución y/o sugerencias</h2></br>
     <a href="#indice">Ir al índice</a>
     <p>
-       No he encontrado ninguno. Sin embargo, al principio cometí el error de eliminar el volumen en vez de eliminar el reflejo. Así que tuve que empezar de nuevo la práctica.
+       No supe hacer en el punto 28.
     </p>
     <a id="conclusion"></a>
     <h2>Conclusión</h2>
     <a href="#indice">Ir al índice</a>
     <p>
-        Los volumenes RAIDs 1 son muy útiles debido a la tolerancia a la perdida de información.
+        
     </p>
     
 </body>
