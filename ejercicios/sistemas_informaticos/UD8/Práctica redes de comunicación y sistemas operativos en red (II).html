@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instalación de Windows</title>
+    <title>Práctica redes de comunicación y sistemas operativos en red (II)</title>
 </head>
 <body style="background-color:navajowhite;">
     <p>
@@ -13,7 +13,7 @@
     <h2>Título</h2></br>
     </p>
     <p>
-        <h1><strong>Práctica Windows. Instalación, administración y configuración (II)</strong></h1></br>
+        <h1><strong>Práctica redes de comunicación y sistemas operativos en red (II)</strong></h1></br>
         Jorge Quintana González 1ºDAM
     </p>
     <p>
@@ -35,8 +35,7 @@
     <h2>Introducción</h2></br>
     <a href="#indice">Ir al índice</a>
     <p>
-        
-
+        En esta práctica trabajaremos con la herramienta DRBL e instalaremos imégenes ISO a equipos clientes mediante el método multicast. 
     </p>
     <p>
     <a id="objetivo"></a>
@@ -44,7 +43,7 @@
     <a href="#indice">Ir al índice</a>
     </p>
     <p>
-       El objetivo de esta memoria es aprender a crear volumenes RAID 1 y comprender su utilidad.
+       El objetivo de esta memoria es aprender a crear utilizar la herramienta DRBL utilizandola para enviar la imágen ISO a varias máquinas cliente utilizando el método multicast.</br>
     </p>
     <p>
     <a id="material"></a>
@@ -73,9 +72,6 @@
     </ul>
     </p>
     <p>
-
-    </p>
-    <p>
     <a id="desarrollo"></a>
     <h2>Desarrollo: </h2></br>
     <a href="#indice">Ir al índice</a>
@@ -88,47 +84,44 @@
     </p>
     
     <p>
-        <img src="" width="800" height="200">
+        <img src="../img/UD8/segundo_disco_montado.png" width="800" height="500">
     </p>
     <p>
         Una vez montado el segundo disco. Hago un reboot pero con la iso de DRBL
     </p>
     <p>
-        <img src="" width="800" height="200">
-    </p>
-    <p>
         Entro en clonezilla lives. Selecciono la opción de guardar la imagen en un disco.
     </p>
-    <img src="../img/UD8/clonezilla_lives.png" width="800" height="200">
+    <img src="../img/UD8/clonezilla_lives.png" width="800" height="500">
     <p>
         Después, indico donde se encuentra la imagen que quiero clonar.
     </p>
-    <img src="../img/UD8/clonezilla2.png" width="800" height="200">
+    <img src="../img/UD8/clonezilla2.png" width="800" height="500">
     <p>
         Indico que quiero que copie la imagen en el segundo disco, en el sdb1
     </p>
-    <img src="../img/UD8/clonezilla3.png" width="800" height="200">
+    <img src="../img/UD8/clonezilla3.png" width="800" height="500">
     <p>
         Aquí indico qué directorio quiero que esté. Por error pulsé en lost+found
     </p>
-    <img src="../img/UD8/clonezilla4.png" width="800" height="200">
+    <img src="../img/UD8/clonezilla4.png" width="800" height="500">
     <p>
         Aquí introduzco el nombre de la imegen que queiro grabar
     </p>
-    <img src="../img/UD8/clonezilla6.png" width="800" height="200">
+    <img src="../img/UD8/clonezilla6.png" width="800" height="500">
     <p>
         Omito la comrpobación para agilizar el proceso.
     </p>
     <p>
-        <img src="../img/UD8/clonezilla7.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla7.png" width="800" height="500">
     </p>
     <p>
-        <img src="../img/UD8/clonezilla8.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla8.png" width="800" height="500">
     </p>
     <p>
         Como indiqué que lo guardará en lost+found ahí estaba. Después moví la imágen a la carpeta que creé.
     </p>
-    <img src="../img/UD8/esperanzaRenovada.png" width="800" height="200">
+    <img src="../img/UD8/esperanzaRenovada.png" width="800" height="500">
     
    
     
@@ -144,94 +137,97 @@
         Elijo el modo de configuración de la red.
     </p>
     <p>
-        <img src="../img/UD8/clonezilla server.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla server.png" width="800" height="500">
     </p>
     <p>
         Introduzco la mascara de red
     </p>
     <p>
-        <img src="../img/UD8/clonezilla server2.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla server2.png" width="800" height="500">
     </p>
     <p>
         Introduzco la Gateway por defecto
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server3.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server3.png" width="800" height="500">
     </p>
     <p>
         Selecciono el disco donde quiero que lean la imágen previamente copiada.
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server5.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server5.png" width="800" height="500">
     </p>
     <p>
         Selecciono quienes quiero que reciban la copia de la imágen.
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server6.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server6.png" width="800" height="500">
     </p>
     <p>
         Indico que quiero que la imágen se descargue directamente a los discos de las máuinas objetivo.
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server7.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server7.png" width="800" height="500">
     </p>
     <p>
         Selecciono la imágen que copie en la primera parte.
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server8.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server8.png" width="800" height="500">
     </p>
     <p>
         Selecciono el modo multicast.
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server9.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server9.png" width="800" height="500">
     </p>
     <p>
         Selecciono el método para la clonación multicast
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server10.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server10.png" width="800" height="500">
     </p>
     <p>
         Una vez llegado a este punto, mantengo abierta esta ventana para que los servicios de clonezilla continuen operativos mientras las máquinas clientes descargan la imágen.
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server11.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server11.png" width="800" height="500">
     </p>
     <p>
         Enciendo las máquinas cliente y me da problemas en el proceso porque no les había dado suficiente memoria.
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server12.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server12.png" width="800" height="500">
     </p>
     <p>
         Les doy más memoria y renuevo el proceso.
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server13.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server13.png" width="800" height="500">
     </p>
     <p>
         Una de las máquinas me falla pero la segunda continua el proceso. Probablemente exigí demasiado a mi ordenador de clase.
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server14.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server14.png" width="800" height="500">
     </p>
     <p>
-        <img src="../img/UD8/clonezilla_server15.png" width="800" height="200">
+        <img src="../img/UD8/clonezilla_server15.png" width="800" height="500">
     </p>
     <a id="problemas"></a>
     <h2>Problemas encontrados en cada actividad, solución y/o sugerencias</h2></br>
     <a href="#indice">Ir al índice</a>
     <p>
-       No he encontrado ninguno. Sin embargo, al principio cometí el error de eliminar el volumen en vez de eliminar el reflejo. Así que tuve que empezar de nuevo la práctica.
+       Cometí dos errores a lo largo de la práctica. El primero fue seleccionar lost found como destino de la imágen copiada en la primera parte, pero lo solucioné al mover la imágen.</br>
+       El segundo fue cuando no dí suficiente espacio a las máquinas cliente para poder completar el proceso de multicast. Sin embargo, no conseguí instalar la imágen en los equipos clientes</br>
+        debido a que no complete el proceso final de instalación de la imágen mediante multicast.
     </p>
     <a id="conclusion"></a>
     <h2>Conclusión</h2>
     <a href="#indice">Ir al índice</a>
     <p>
-        Los volumenes RAIDs 1 son muy útiles debido a la tolerancia a la perdida de información.
+        Me ha gustado la práctica, pero es una lástima que no la llegué a terminar. Comprendo que este metodo de copiar imágenes ISO a otros equipos es muy útil, porque te permite instalar SOs de muchos equipos</br>
+        mucho más rápida que hacerlo 1 en uno.
     </p>
     
 </body>
