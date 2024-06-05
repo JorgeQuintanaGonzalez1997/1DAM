@@ -80,17 +80,48 @@
         <span style="color:red">Parte 2</span><span style="color:blue"></span>
     </p>
     <p>
+        Ejecuto el comando docker run hello-world
+    </p>
+    <p>
+        <img src="../img/UD9/Parte2_hello.PNG" width="800" height="500">
+    </p>
+    <p>
         <img src="../img/UD9/Parte3_wordpress.png" width="800" height="500">
     </p>
     <p>
         <span style="color:red">Parte 3</span><span style="color:blue"></span>
     </p>
-    <img src="../img/UD9/Parte3_wordpress.png" width="800" height="500">
-    <img src="../img/UD9/Parte3_foto_final_wordpress.png" width="800" height="500">
+    <p>
+        Ejecuto el comando docker run -it -p 8080:80 --name LAMP ubuntu /bin/bash</br>
+        Iniciando un nuevo contenedor, manteniendo la entrada estándar (stdin) con -i incluso si no estás conectado, y
+        Asignando un terminal -TTY, permitiendo la interacción con el contenedor a través de la línea de comandos con -t.
+        -p 8080:80 mapeo el puerto 8080 del host al puerto 80 del contenedor.
+        Le asigno el nombre LAMP al contenedor. Especifico la imagen que utilizare, Ubuntu.
+        Especifico la Shell /bin/bash del contenedor.
+
+        Después de actualizar los paquetes, ejecutamos el comando apt install wordpress php libapache2-mod-php mysql-server,
+        para instalar wordpress.
+
+        Creo el fichero de configuración en "/etc/apache2/sites-available/wordpress.conf.
+        Accedo a mysql y creo una base de datos mediante la terminal.
+
+    </p>
+    <p>
+        <img src="../img/UD9/Parte3_wordpress.png" width="800" height="500">
+    </p>
+    <p>
+        <img src="../img/UD9/Parte3_foto_final_wordpress.png" width="800" height="500">
+    </p>
     <p>
         <span style="color:red">Parte 4</span><span style="color:blue"></span>
     </p>
-    <img src="../img/UD9/Parte4_crearImagenCaso2.png" width="800" height="500">
+    Utilizo el Dockerfile ya preparado por el profesor y ejecuto el comando docker build -t sampledocker ./</br>
+    El comando me permite crear una nueva imagen, y con -t etiquetarla con el nombre "sampledocker"</br>
+    Luego ejecuto el siguiente comando docker run -dp 3000:3000 sampledocker. Creo un contenedor que se ejecutará en segundo plano con -d, </br>
+    y mapeo los puertos con -p.
+    <p>
+        <img src="../img/UD9/Parte4_crearImagenCaso2.png" width="800" height="500">
+    </p>
     <p>
         Enlace de mi docker hub:  https://hub.docker.com/repository/docker/jorge598/practica_docker_hub/general
     </p>
@@ -98,25 +129,60 @@
     <p>
         <span style="color:red">Parte 5</span><span style="color:blue"></span>
     </p>
-    <img src="../img/UD9/Parte5_wordpress_1.png" width="800" height="500">
-    <img src="../img/UD9/Parte5_2_wordpress_2.png" width="800" height="500">
-    <img src="../img/UD9/Parte5_3_mysql_3.png" width="800" height="500">
-    <img src="../img/UD9/Parte5_wordpress_pagina.png" width="800" height="500">
-    <img src="../img/UD9/Parte5_wordpress_final.png" width="800" height="500">
+    <p>
+        Creo una red que compartirán los contenedores, con el nombre redwp, con el comando docker network create redwp y</br>
+        mapeo mediante "binding mount" el directorio local "/home/jorge/mysqldata" con "/var/lib/mysql".</br>
+        Después con el comando docker run --name nuestrowp --network redwp -p 8080:80 -d wordpress creamos el contenedor nuestrowp</br>
+        y lo metemos en redwp.
+    </p>
+    <p>
+        <img src="../img/UD9/Parte5_wordpress_1.png" width="700" height="200">
+    </p>
+    <p>
+        <img src="../img/UD9/Parte5_2_wordpress_2.png" width="800" height="500">
+    </p>
+    <p>
+        <img src="../img/UD9/Parte5_3_mysql_3.png" width="800" height="500">
+    </p>
+    <p>
+        <img src="../img/UD9/Parte5_wordpress_pagina.png" width="800" height="500">
+    </p>
+    <p>
+        <img src="../img/UD9/Parte5_wordpress_final.png" width="800" height="500">
+    </p>
     <p>
         <span style="color:red">Parte 6</span><span style="color:blue"></span>
     </p>
-    <img src="../img/UD9/Parte6_docker_compose.png" width="1500" height="500">
-    <img src="../img/UD9/Parte6_wordpress6.png" width="800" height="500">
+    <p>
+       Intento descargar el fichero docker-compose.yml con el comando docker-compose up -d (-d para ejecutarlo en segundo plano).</br>
+       Sin embargo me salta un error, en el cual sólo acepta la versión 2.2 o 3.3, así que cambio la versión del documento de 3.9 a 3.3</br>
+    </p>
+
+    <p>
+        <img src="../img/UD9/Parte6_docker_compose.png" width="1500" height="500">
+    </p>
+    <p>
+        <img src="../img/UD9/Parte6_wordpress6.png" width="800" height="500">
+    </p>
     <p>
         <span style="color:red">Parte 7</span><span style="color:blue"></span>
     </p>
-    <img src="../img/UD9/Parte7_VSC_docker1.PNG" width="1000" height="500">
-    <img src="../img/UD9/Parte7_index_VSC_container2.PNG" width="800" height="500">
-    <img src="../img/UD9/Parte7_finalParte1.PNG" width="800" height="500">
+    <p>
+        Instalo visual studio en la MV. Instalo las extensiones de "Docker" y "Remote-Containers"</br>
+        Ejecuto el siguiente comando docker run -d --name servidordesarrollo -p 8080:80 php: 7.2-apache </br>
+        Después, abrimos visual studio y accedemos a las utilidades del docker.</br>
+        Seleccionamos el contenedor que queramos asociar con visual studio, y después la opción "Attach Visual Studio Code".</br>
+    </p>
+    <p>
+        <img src="../img/UD9/Parte7_VSC_docker1.PNG" width="1000" height="500">
+    </p>
+    <p>
+        <img src="../img/UD9/Parte7_index_VSC_container2.PNG" width="800" height="500">
+    </p>
+    <p>
+        <img src="../img/UD9/Parte7_finalParte1.PNG" width="800" height="500">
+    </p>
 
-   
-  
     <a id="problemas"></a>
     <h2>Problemas encontrados en cada actividad, solución y/o sugerencias</h2></br>
     <a href="#indice">Ir al índice</a>
